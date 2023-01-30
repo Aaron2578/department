@@ -1,37 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Bsc-Material</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bsc CS</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='style.css'>
-    <script src="main.js"></script>
-    <link rel="icon" href="Pictures/Logo of bsc.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Caramel&family=Dancing+Script:wght@400;500;600;700&family=Rubik+Puddles&family=Rubik+Spray+Paint&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            padding-left: 0.5em;
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+            background: black;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 20px;
+            font-weight:800;
+            color:aqua;
+        }
+
+        #navbarSupportedContent a {
+            color:white;
+            border-bottom: 2px solid transparent;
+        }
+
+        .dropdown-menu {
+            background: #000;
+        }
+
+        .dropdown-item:hover{
+            background: none;
+        }
+
+        #navbarSupportedContent a:hover {
+            border-bottom: 2px solid cyan;
+            transition: 1s;
+        }
+
+        #navbarSupportedContent button {
+            border-radius: 15px;
+            background:cyan;
+        }
+
+        .nav-item {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        span {
+            font-size: 15px;
+            color:yellow;
+        }
+    </style>
+
 </head>
 <body>
-    <div class="container-fluid" style="margin-top:1em;">
-        <h1 style="font-family: 'Rubik Vinyl'; color:rgb(252, 14, 14);">Department of Bsc</h1>
-        </div>
+
+
+    <!--NavBar Content-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
         <div class="container-fluid">
-        <div class="row" style="margin-top:1em;">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-2 bg-link text-center text-black "><b><a href="index.html" style="text-decoration: none; color:black;"><img src="Pictures/Home.gif" style="height:20px;">&emsp;HOME</b></a></div>
-            <div class="col-lg-2 bg-success text-center text-black rounded"><a href="material.html" style="text-decoration: none; color:black;"><b><img src="Pictures/study.gif" style="height:20px;">&emsp;MATERIAL</b></a></div>
-            <div class="col-lg-2 bg-link text-center text-black"><b><a href="Student.php" style="text-decoration: none; color:black;"><img src="Pictures/contact.gif" style="height:20px;">&emsp;FACULTY</b></a></div>
-            <div class="col-lg-2 bg-link text-center text-black"><b><a href="Login.html" style="text-decoration: none; color:black;"><img src="Pictures/login.gif" style="height:20px;">&emsp;LOGGING</b></a></div>
-            <div class="col-lg-2"></div>
+          <a class="navbar-brand" href="index.html">Department of Bsc<span>&emsp;Computer Science</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Facultytab.html">Faculty</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Materials
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="material.html">Question Paper</a></li>
+                  <li><a class="dropdown-item" href="main.html">Study Materials</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="practice.html">Syallabus</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Contact</a>
+              </li>
+            </ul>
+              <a href="Login.php"><button class="btn p-2 my-lg-0 my-2" type="submit">Sign In</button></a>
+          </div>
         </div>
-        </div>
-   <div style="text-align: center;margin-top:2em;"><br><br><br><br>
-    <a href="material3a.html"><button type="button" class="btn btn-danger">Odd Sem</button></a>
+      </nav>
+
+        <!--Content-1-->
+        <br><br><br><br><br><br><br><br>
+        <div class="container">
+            <div class="row">
+   <div class="col-lg-4" style="text-align: center;margin-top:2em;">
+    <a href="first_year.html"><button type="button" class="btn btn-danger">1st Year</button></a>
     </div>
-   <div style="text-align: center;margin-top:2em;">
-    <a href="material3b.html"><button type="button" class="btn btn-success">Even Sem</button></a>
+   <div class="col-lg-4" style="text-align: center;margin-top:2em;">
+    <a href="material3b.html"><button type="button" class="btn btn-success">2nd Year</button></a>
     </div>
+    <div class="col-lg-4" style="text-align: center;margin-top:2em;">
+    <a href="material3b.html"><button type="button" class="btn btn-warning">3rd Year</button></a>
+    </div>
+</div>
+</div><br><br><br>
             <pre style="text-align: center;color:red;font-weight: bold; font-size:1.5 em;">
                     
                     
